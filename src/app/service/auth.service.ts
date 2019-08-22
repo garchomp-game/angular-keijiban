@@ -20,6 +20,6 @@ export class AuthService {
     const url = 'http://localhost:3000/login';
     let observable: Observable<any>;
     observable = this.http.post(url, {name, password});
-    observable.subscribe()
+    observable.subscribe(data => localStorage.setItem('token', data.token));
   }
 }
