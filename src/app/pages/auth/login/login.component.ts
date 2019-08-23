@@ -1,5 +1,6 @@
 import { AuthService } from './../../../service/auth.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,16 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
-  @Input() private name: string;
-  @Input() private password: string;
+  @Input() public name: string;
+  @Input() public password: string;
   constructor(
     private readonly authService: AuthService,
+    private readonly router: Router,
   ) { }
 
   public ngOnInit() {
   }
 
-  private submit() {
+  public login() {
     this.authService.login(this.name, this.password);
+    this.router.navigate(['board']);
   }
 }

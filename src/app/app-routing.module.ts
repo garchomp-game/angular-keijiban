@@ -10,10 +10,11 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     children: [
-      { path: 'board/index', component: BoardIndexComponent },
+      { path: 'board', component: BoardIndexComponent },
     ]
   },
-  {path: 'login', component: LoginComponent},
+  { path: '', redirectTo: 'board', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
