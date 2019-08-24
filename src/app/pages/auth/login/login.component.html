@@ -2,15 +2,13 @@
   <h2>ログインフォーム</h2>
   <div>
     <div>
-      <label for="">名前</label>
-      <input [(ngModel)]="name" />
+      <app-input-text></app-input-text>
     </div>
     <div>
-      <label for="">パスワード</label>
-      <input [(ngModel)]="password" type="password" />
+      <app-input-text></app-input-text>
     </div>
     <div>
-      <button (click)="login()" >ログイン</button>
+      <button (click)="login()">ログイン</button>
     </div>
   </div>
 </div>

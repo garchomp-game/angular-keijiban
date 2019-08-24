@@ -16,45 +16,30 @@ import { ChatCreateComponent } from './chat/chat-create/chat-create.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 
-
+const Components: Array<any> = [
+  UserIndexComponent,
+  UserShowComponent,
+  UserEditComponent,
+  UserCreateComponent,
+  BoardIndexComponent,
+  BoardShowComponent,
+  BoardEditComponent,
+  BoardCreateComponent,
+  ChatIndexComponent,
+  ChatShowComponent,
+  ChatEditComponent,
+  ChatCreateComponent,
+  LoginComponent,
+  SignupComponent
+];
 
 @NgModule({
-  declarations: [
-    UserIndexComponent,
-    UserShowComponent,
-    UserEditComponent,
-    UserCreateComponent,
-    BoardIndexComponent,
-    BoardShowComponent,
-    BoardEditComponent,
-    BoardCreateComponent,
-    ChatIndexComponent,
-    ChatShowComponent,
-    ChatEditComponent,
-    ChatCreateComponent,
-    LoginComponent,
-    SignupComponent
-  ],
+  declarations: Components,
   imports: [
     CommonModule,
     FormsModule,
   ],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
-  exports: [
-    UserIndexComponent,
-    UserShowComponent,
-    UserEditComponent,
-    UserCreateComponent,
-    BoardIndexComponent,
-    BoardShowComponent,
-    BoardEditComponent,
-    BoardCreateComponent,
-    ChatIndexComponent,
-    ChatShowComponent,
-    ChatEditComponent,
-    ChatCreateComponent,
-    LoginComponent,
-    SignupComponent
-  ],
+  exports: Components
 })
 export class PagesModule { }
